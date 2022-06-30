@@ -1,6 +1,12 @@
 import "./App.css";
-import React, { useEffect, Suspense } from "react";
-import { Canvas, useThree, useLoader, extend } from "@react-three/fiber";
+import React, { useEffect, useRef, Suspense } from "react";
+import {
+  Canvas,
+  useThree,
+  useLoader,
+  useFrame,
+  extend,
+} from "@react-three/fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { Stars, shaderMaterial } from "@react-three/drei";
@@ -76,18 +82,38 @@ const CameraController = () => {
 };
 
 function Scene() {
+  const meshReference = React.useRef();
+  useFrame(({ clock }) => {
+    meshReference.current.rotation.y = clock.getElapsedTime() / 2;
+  });
+
   return (
     <>
       <CameraController />
-      <Stars />
+      <Stars
+        radius={100}
+        depth={50}
+        count={5000}
+        factor={4}
+        saturation={0}
+        fade
+        speed={1}
+      />
       <ambientLight intensity={0.1} />
       <pointLight position={[1, 1, 1]} />
-      <mesh>
+      <mesh ref={meshReference}>
         <sphereBufferGeometry attach="geometry" args={[1.5, 50, 50]} />
         <globeShaderMaterial
           uColor={new THREE.Color(0.3, 0.6, 1.0)}
           globeTexture={new THREE.TextureLoader().load("globe.jpg")}
         />
+        <mesh position={[0, 0, 6]}>
+          <sphereBufferGeometry attach="geometry" args={[0.35, 50, 50]} />
+          <globeShaderMaterial
+            uColor={new THREE.Color(0.1, 0.1, 0.1)}
+            globeTexture={new THREE.TextureLoader().load("moon.jpg")}
+          />
+        </mesh>
       </mesh>
       <mesh>
         <sphereBufferGeometry attach="geometry" args={[1.59, 50, 50]} />
@@ -95,13 +121,6 @@ function Scene() {
           attach="material"
           blending={THREE.AdditiveBlending}
           side={THREE.BackSide}
-        />
-      </mesh>
-      <mesh position={[0, 0, 6]}>
-        <sphereBufferGeometry attach="geometry" args={[0.35, 50, 50]} />
-        <globeShaderMaterial
-          uColor={new THREE.Color(0.1, 0.1, 0.1)}
-          globeTexture={new THREE.TextureLoader().load("moon.jpg")}
         />
       </mesh>
     </>
