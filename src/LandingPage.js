@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, useRef } from "react";
+import React, { useEffect, Suspense, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 // import {
 //   Canvas,
@@ -53,6 +53,17 @@ import { Link } from "react-router-dom";
 // }
 
 const LandingPage = () => {
+  const [backendData, setBackendData] = useState([{}]);
+
+  useEffect(() => {
+    fetch("/api/users")
+      .then((response) => response.json)
+      .then((data) => {
+        setBackendData(data);
+      });
+  }, []);
+
+  
   window.addEventListener(
     "scroll",
     () => {
