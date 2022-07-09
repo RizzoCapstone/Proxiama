@@ -113,33 +113,43 @@ const InfoPage = () => {
               that is located approximately 40 light-years away from us and
               contains four planets in the “Goldilocks Zone.""
             </p>
+
+            {/* <img
+              className="tocMethodsImg"
+              src="https://inteng-storage.s3.amazonaws.com/img/iea/M3OeLjgWwN/habitable-zone-cc-8bit.jpg"
+              alt="Diagram of our solar system's habitable zone"
+            /> */}
           </div>
 
           <div className="infoPageContentCard">
             <h2 id="toc4">Exoplanet Types</h2>
             <p>
-              <span>Gas giants</span> - large planets mostly
-              composed of helium and/or hydrogen. These planets, like Jupiter
-              and Saturn in our solar system, don’t have hard surfaces and
-              instead have swirling gases above a solid core. Gas giant
-              exoplanets can be much larger than Jupiter, and much closer to
-              their stars than anything found in our solar system.
+              <h5>Gas giants</h5>
+              Large planets mostly composed of helium
+              and/or hydrogen. These planets, like Jupiter and Saturn in our
+              solar system, don’t have hard surfaces and instead have swirling
+              gases above a solid core. Gas giant exoplanets can be much larger
+              than Jupiter, and much closer to their stars than anything found
+              in our solar system.
             </p>
             <p>
-              <span>Super earths</span> - a class of planets
-              unlike any in our solar system – are more massive than Earth yet
-              lighter than ice giants like Neptune and Uranus, and can be made
-              of gas, rock or a combination of both. They are between twice the
-              size of Earth and up to 10 times its mass.
+              <h5>Super earths</h5> 
+              A class of planets unlike any in our
+              solar system – are more massive than Earth yet lighter than ice
+              giants like Neptune and Uranus, and can be made of gas, rock or a
+              combination of both. They are between twice the size of Earth and
+              up to 10 times its mass.
             </p>
             <p>
-              <span>Neptunian</span> - These exoplanets are similar in
-              size to Neptune or Uranus in our solar system. Neptunian planets
-              typically have hydrogen and helium-dominated atmospheres with
-              cores or rock and heavier metals.
+              <h5>Neptunian</h5>
+              These exoplanets are similar in size to
+              Neptune or Uranus in our solar system. Neptunian planets typically
+              have hydrogen and helium-dominated atmospheres with cores or rock
+              and heavier metals.
             </p>
             <p>
-              <span>Terrestrial</span> - In our solar system, Earth, Mars,
+              <h5>Terrestrial</h5>
+              In our solar system, Earth, Mars,
               Mercury and Venus are terrestrial, or rocky, planets. For planets
               outside our solar system, those between half of Earth’s size to
               twice its radius are considered terrestrial and others may be even
@@ -242,6 +252,13 @@ const InfoPage = () => {
                 method.
                 <br></br>
                 <br></br>
+                <img
+                  className="tocMethodsImg"
+                  src="https://miro.medium.com/max/1240/1*AzZBScXN1GlH1A6IDlmmOw.png"
+                  alt="TEO sample"
+                />
+                <br></br>
+                <br></br>
                 Images are taken of the host star and reference stars in close
                 proximity to it, and these are analyzed at regular intervals by
                 measuring the distance between the target and reference stars.
@@ -275,6 +292,13 @@ const InfoPage = () => {
                 block more light(which can be used to determine its diameter),
                 and a transit event lasts longer if its distance from the host
                 star is greater.
+                <br></br>
+                <br></br>
+                <img
+                  className="tocMethodsImg"
+                  src="https://miro.medium.com/max/1400/1*GINwXbZ1xNrwydlIo6U1ww.png"
+                  alt="TEO sample"
+                />
                 <br></br>
                 <br></br>
                 The structure and composition of planets can be characterized by
@@ -315,7 +339,7 @@ const InfoPage = () => {
               </p>
             </div>
           </div>
-         
+
           <div className="infoPageContentCard">
             <h2 id="toc8">Some exoplanet missions</h2>
             <h4>Past</h4>

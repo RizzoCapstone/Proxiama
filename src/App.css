@@ -461,6 +461,11 @@ Single Planet */
   list-style-type: none;
 }
 
+.tocMethodsImg {
+  width: 70%;
+  height: 60%;
+}
+
 #toc span {
   color: gold;
 }
@@ -494,10 +499,13 @@ a li {
 
 .infoPageContentCard h4 {
   margin-top: 2rem;
+  font-size: 1.3rem;
 }
 
 .infoPageContentCard h5 {
   color: rgb(61, 102, 160);
+  font-size: 1.1rem;;
+
 }
 
 .infoPageContentCard ul li {
