@@ -19,7 +19,7 @@ const LandingPage = () => {
         <ParallaxLayer
           id="heroContainer"
           factor={1.5}
-          sticky={{ start: 0, end: 1.75 }}
+          sticky={{ start: 0, end: 1 }}
         >
           {/* <div id="introLandingPageContainer"> */}
           {/* <section id="introLandingPage"></section> */}
@@ -88,17 +88,7 @@ const LandingPage = () => {
             moment the Earth is where we make our stand..."
           </h2>
         </ParallaxLayer> */}
-        <ParallaxLayer
-          offset={2}
-          speed={0.75}
-          factor={1.2}
-          // style={{
-          //   backgroundImage:
-          //     'url("https://c.tenor.com/KRIGLPCuG-4AAAAC/earth-planet.gif")',
-
-          //   backgroundSize: '35%',
-          // }}
-        >
+        <ParallaxLayer offset={2} speed={0.75} factor={1.2}>
           <div className="landingPageText">
             <h2 className="centerText">
               Over 30 years have passed since then. We've continued to learn
@@ -108,7 +98,7 @@ const LandingPage = () => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={3}
+          offset={2.3}
           factor={8}
           style={{ zIndex: "-10" }}
           speed={0.5}
@@ -122,12 +112,14 @@ const LandingPage = () => {
           style={{ zIndex: "-9" }}
         ></ParallaxLayer>
         <ParallaxLayer offset={3} speed={0.2}>
-          <h2 className="text">
-            Eventually, humanity will begin settling in these places.
-          </h2>
+          <div className="landingPageText">
+            <h2 className="text">
+              Eventually, humanity will begin settling in these places.
+            </h2>
+          </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={3.49}
+          offset={3.2}
           speed={0.75}
           style={{
             backgroundImage:
@@ -138,7 +130,7 @@ const LandingPage = () => {
           }}
         ></ParallaxLayer>
         <ParallaxLayer
-          offset={3.7}
+          offset={3.3}
           speed={2}
           style={{
             backgroundImage:
@@ -149,10 +141,13 @@ const LandingPage = () => {
           }}
         ></ParallaxLayer>
 
-        <ParallaxLayer offset={3.999} speed={0.35}>
+        <ParallaxLayer offset={3.99} speed={0.35}>
+                    <div className="landingPageText">
+
           <h2 className="text">
             Our species will spread out futher than our Pale Blue Dot.
           </h2>
+          </div>
         </ParallaxLayer>
 
         {/* <ParallaxLayer
@@ -169,9 +164,9 @@ const LandingPage = () => {
         {/* <ParallaxLayer offset={4.5} speed={2} factor={0.5}>
           <h2 className="rightText">But where else will we go?</h2>
         </ParallaxLayer> */}
-        <ParallaxLayer offset={5.1} speed={0.13}>
+        <ParallaxLayer offset={4.5} speed={0.13}>
           <h2 className="landingPageText">
-            <p className="rightText">
+            <p className="duneText">
               For centuries, fictional depictions of planets orbiting other
               stars have fired our imagination. From the desert world of Arrakis
               in Dune to the lush jungles of Yoda's planet Dagobah in Star Wars,
@@ -181,11 +176,11 @@ const LandingPage = () => {
           </h2>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={5.4} speed={0.41} factor={0.85}>
+        <ParallaxLayer offset={4.9} speed={0.41} factor={0.85}>
           <img className="dune" src="dune.png" alt="dunes" />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={5.2}
+          offset={4.7}
           speed={0.22}
           style={{
             backgroundImage:
@@ -196,7 +191,7 @@ const LandingPage = () => {
           }}
         ></ParallaxLayer>
         <ParallaxLayer
-          offset={5.1}
+          offset={4.5}
           speed={0.1}
           style={{
             backgroundImage:
@@ -206,7 +201,7 @@ const LandingPage = () => {
             backgroundSize: "50%",
           }}
         ></ParallaxLayer>
-        <ParallaxLayer offset={6.41} speed={1}>
+        <ParallaxLayer offset={5.5} speed={1}>
           <h2 className="landingPageText">
             <p className="centerText">
               We now know that worlds beyond our solar system — known as
@@ -217,7 +212,7 @@ const LandingPage = () => {
           </h2>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={6.7}
+          offset={5.8}
           speed={1}
           style={{
             backgroundImage:
@@ -229,7 +224,7 @@ const LandingPage = () => {
         ></ParallaxLayer>
 
         <ParallaxLayer
-          offset={6.64}
+          offset={5.83}
           speed={0.75}
           style={{
             backgroundImage:
@@ -241,7 +236,7 @@ const LandingPage = () => {
         ></ParallaxLayer>
 
         <ParallaxLayer
-          offset={6.7}
+          offset={5.87}
           speed={1.2}
           style={{
             backgroundImage:
@@ -252,7 +247,7 @@ const LandingPage = () => {
           }}
         ></ParallaxLayer>
 
-        <ParallaxLayer offset={7} speed={1} factor={0.1}>
+        <ParallaxLayer offset={6.2} speed={1} factor={0.1}>
           <div className="landingPageText">
             <h2 className="text">
               Some exoplanets are surprisingly similar to fictional worlds we've
@@ -262,7 +257,7 @@ const LandingPage = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={7.999} speed={2} factor={0.5}>
+        <ParallaxLayer offset={6.99} speed={2} factor={0.5}>
           <div className="landingPageText">
             <h2 className="centerText">Where would you like to go first?</h2>
           </div>
@@ -280,7 +275,7 @@ const LandingPage = () => {
           <h2 className="centerOffsetLeftText">That's here.</h2>
           <h2 className="centerOffsetRightText">That's home.</h2>
         </ParallaxLayer> */}
-        <ParallaxLayer offset={8} speed={0.75}>
+        <ParallaxLayer offset={7} speed={0.75}>
           <div id="milkyWayLandingPageContainer">
             <section id="milkyWayLandingPage">
               <img

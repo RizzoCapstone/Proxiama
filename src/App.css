@@ -132,9 +132,23 @@ Landing Page  */
   /* color: white; */
   color: blanchedalmond;
 
-  font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5;
   /* font-weight: 400; */
   animation: slide-up 3s;
+}
+
+.duneText {
+  position: fixed;
+  width: 25rem;
+  right: 7%;
+  top: 10%;
+  bottom: 20%;
+  color: blanchedalmond;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  animation: slide-up 3s;
+
 }
 
 .centerOffsetLeftText {
@@ -244,9 +258,9 @@ Landing Page  */
 Milky Way Buttons */
 
 .galaxyButtons {
-  height: 25px;
-  width: 25px;
-  border-color: crimson;
+  height: 40px;
+  width: 40px;
+  border-color: black;
   background-color: transparent;
   border-radius: 50%;
   opacity: 0.7;
@@ -255,7 +269,7 @@ Milky Way Buttons */
 /* https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/ */
 
 .galaxyButtons:hover {
-  border-color: yellow;
+  border-color: crimson;
   background-position: 0 100%;
   transition: opacity 1s, visibility 0.2s;
 }
@@ -273,9 +287,9 @@ Milky Way Buttons */
 
 #sunDescription {
   margin-left: 0.5rem;
-  height: 20px;
-  width: 20px;
-  color: white;
+  height: 30px;
+  width: 30px;
+  color: black;
   /* visibility: hidden; */
   opacity: 0.7;
   transition: opacity 1s, visibility 0.2s;
@@ -284,7 +298,7 @@ Milky Way Buttons */
 #sunWrapper:hover #sunDescription {
   /* visibility: visible; */
   opacity: 1;
-  color: yellow;
+  color: crimson;
 }
 
 /* ***********************
