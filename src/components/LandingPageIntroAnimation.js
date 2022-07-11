@@ -5,7 +5,7 @@ const LandingPageIntroAnimation = () => {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     const w = (canvas.width = window.innerWidth);
-    const h = (canvas.height = (window.innerHeight) * 1.3);
+    const h = (canvas.height = (window.innerHeight));
 
     // Cache gradient
     const canvas2 = document.createElement("canvas");
