@@ -1,8 +1,8 @@
-import React, { useEffect, Suspense, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import BgStars from './BgStars';
-import LandingPageIntroAnimation from './LandingPageIntroAnimation';
+import React, { useEffect, Suspense, useRef } from "react";
+import { Link } from "react-router-dom";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import BgStars from "./BgStars";
+import LandingPageIntroAnimation from "./LandingPageIntroAnimation";
 
 //choose font
 //fix header fade-out
@@ -57,7 +57,7 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://d494u2iqg624y.cloudfront.net/picture_material_preview/2021/12/10/bff975b85a8d4f65b4904930e2fe30b3.png")',
-            backgroundPositionX: '45%',
+            backgroundPositionX: "45%",
           }}
         ></ParallaxLayer>
         <ParallaxLayer
@@ -68,8 +68,8 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://d494u2iqg624y.cloudfront.net/picture_material_original/2021/12/15/d1a5227713c74d10bc2ef77c220e1c62.png")',
-            backgroundPositionX: '25%',
-            backgroundSize: '45%',
+            backgroundPositionX: "25%",
+            backgroundSize: "45%",
           }}
         >
           <div className="centerText">
@@ -108,7 +108,7 @@ const LandingPage = () => {
         <ParallaxLayer
           offset={2}
           factor={8}
-          style={{ zIndex: '-10' }}
+          style={{ zIndex: "-10" }}
           speed={0.5}
         >
           <BgStars />
@@ -117,7 +117,7 @@ const LandingPage = () => {
           className="background"
           offset={2.5}
           factor={8}
-          style={{ zIndex: '-9' }}
+          style={{ zIndex: "-9" }}
         ></ParallaxLayer>
         <ParallaxLayer offset={2.35} speed={0.2}>
           <h2 className="text">
@@ -135,9 +135,9 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://img1.cgtrader.com/items/2867081/b970c04482/large/mars-planet-with-8k-textures-3d-model-obj.jpg")',
-            backgroundPositionX: '50%',
-            zIndex: '-1',
-            backgroundSize: '35%',
+            backgroundPositionX: "50%",
+            zIndex: "-1",
+            backgroundSize: "35%",
           }}
         ></ParallaxLayer>
         <ParallaxLayer
@@ -146,9 +146,9 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://pluspng.com/img-png/planet-png-hd-mqo-class-planet-png-1024.png")',
-            backgroundPositionX: '48%',
-            zIndex: '-1',
-            backgroundSize: '36%',
+            backgroundPositionX: "48%",
+            zIndex: "-1",
+            backgroundSize: "36%",
           }}
         ></ParallaxLayer>
 
@@ -208,9 +208,9 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://ewscripps.brightspotcdn.com/dims4/default/587b3dc/2147483647/strip/true/crop/1280x720+0+67/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Fab%2Fff%2F89135384404dbb4f49ac6f1f0d72%2Fmicrosoftteams-image.png")',
-            backgroundPositionX: '50%',
-            zIndex: '-4',
-            backgroundSize: '50%',
+            backgroundPositionX: "50%",
+            zIndex: "-4",
+            backgroundSize: "50%",
           }}
         ></ParallaxLayer>
         {/* https://ewscripps.brightspotcdn.com/dims4/default/587b3dc/2147483647/strip/true/crop/1280x720+0+67/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Fab%2Fff%2F89135384404dbb4f49ac6f1f0d72%2Fmicrosoftteams-image.png */}
@@ -220,9 +220,9 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://www.nicepng.com/png/full/1-15276_sun-png-clip-art-planet-sun-clipart.png")',
-            backgroundPositionX: '22%',
-            zIndex: '-3',
-            backgroundSize: '18%',
+            backgroundPositionX: "22%",
+            zIndex: "-3",
+            backgroundSize: "18%",
           }}
         ></ParallaxLayer>
         <ParallaxLayer
@@ -274,9 +274,9 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://upload.wikimedia.org/wikipedia/commons/6/60/Bringer_of_War_Planet.png")',
-            backgroundPositionX: '7%',
-            zIndex: '-3',
-            backgroundSize: '25%',
+            backgroundPositionX: "7%",
+            zIndex: "-3",
+            backgroundSize: "25%",
           }}
         ></ParallaxLayer>
 
@@ -286,9 +286,9 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Arcadian_Planet_Beta.png/640px-Arcadian_Planet_Beta.png")',
-            backgroundPositionX: '48%',
-            zIndex: '-3',
-            backgroundSize: '25%',
+            backgroundPositionX: "48%",
+            zIndex: "-3",
+            backgroundSize: "25%",
           }}
         ></ParallaxLayer>
 
@@ -298,9 +298,9 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Gajillion_Islands_Planet.png/640px-Gajillion_Islands_Planet.png")',
-            backgroundPositionX: '99%',
-            zIndex: '-3',
-            backgroundSize: '20%',
+            backgroundPositionX: "99%",
+            zIndex: "-3",
+            backgroundSize: "20%",
           }}
         ></ParallaxLayer>
 
@@ -321,9 +321,9 @@ const LandingPage = () => {
           style={{
             backgroundImage:
               'url("https://cdn.pixabay.com/photo/2019/05/01/14/25/space-4171004_960_720.png")',
-            backgroundPositionX: '50%',
-            zIndex: '-1',
-            backgroundSize: '45%',
+            backgroundPositionX: "50%",
+            zIndex: "-1",
+            backgroundSize: "45%",
           }}
         ></ParallaxLayer>
         {/* <ParallaxLayer
@@ -347,7 +347,7 @@ const LandingPage = () => {
                 alt="milkway"
               />
               <div id="sunWrapper">
-                <Link to={'/home'}>
+                <Link to={"/home"}>
                   <button id="sun" className="galaxyButtons"></button>
                 </Link>
                 <span id="sunDescription">The Sun</span>

@@ -1,50 +1,61 @@
-import React, { useRef, useEffect } from "react";
+import React, { useMemo, useRef, useEffect } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { BufferAttribute } from "three";
 
-const LoadingScreen = () => {
-  const requestRef = useRef();
-  // const canvas = requestRef.current;
-  const [numStars, setNumStars] = React.useState(1900);
-  const [radius, setRadius] = React.useState(
-    "0." + Math.floor(Math.random() * 9) + 1
-  );
-  const [focalLength, setFocalLength] = React.useState();
-  const [centerX, setCenterX] = React.useState();
-  const [centerY, setCenterY] = React.useState();
-
-  const [stars, setStars] = React.useState([]);
-  const [i, setI] = React.useState();
-  const [animate, setAnimate] = React.useState(true);
-
-  const playAnimation = (time) => {
-    requestAnimationFrame(playAnimation);
-  };
+const MyMesh = () => {
+  const [starPos, setStarPos] = React.useState();
+  const ref = useRef();
+  let count = 1000;
 
   useEffect(() => {
-    requestRef.initializeStars();
-    playAnimation();
+    const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 7.5);
+    setStarPos(new BufferAttribute(new Float32Array(p), 3));
   }, []);
 
-  function initializeStars() {
-    setCenterX(canvas.width / 2);
-    setCenterY(canvas.height / 2);
-    setFocalLength(canvas.width * 2);
+  useEffect(() => {
+    console.log(starPos);
+  }, [starPos]);
 
-    let star;
+  // const points = useMemo(() => {
+  //   const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 7.5);
+  //   return new BufferAttribute(new Float32Array(p), 3);
+  // }, [count]);
 
-    let starsArr = [];
-    for (let i = 0; i < numStars; i++) {
-      star = {
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        z: Math.random() * canvas.width,
-        o: "0." + Math.floor(Math.random() * 99) + 1,
-      };
-      starsArr.push(star);
-    }
-    setStars(starsArr);
-  }
+  // useFrame(
+  //   (state, delta) => {
+  //     let newArr = [...starPos.array];
+  //     for (let i = 0; i < newArr.length; i++) {
+  //       newArr[i] = newArr[i] + 0.1;
+  //     }
+  //     setStarPos(newArr);
+  //   }
+  //   // starPos.array.map((value) => {
+  //   //   console.log(value);
+  //   // })
+  // );
 
-  return <canvas ref={requestRef}></canvas>;
+  return (
+    <points>
+      <bufferGeometry>
+        <bufferAttribute attach={"attributes-position"} {...starPos} />
+      </bufferGeometry>
+      <pointsMaterial
+        size={0.1}
+        threshold={0.1}
+        color={0xff00ff}
+        sizeAttenuation={true}
+      />
+    </points>
+  );
 };
 
-export default LoadingScreen;
+export const LoadingScreen = () => {
+  return (
+    <div className="loading">
+      <Canvas>
+        <ambientLight />
+        <MyMesh />
+      </Canvas>
+    </div>
+  );
+};

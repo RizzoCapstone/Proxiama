@@ -9,7 +9,8 @@ import {
 import LandingPage from "./components/LandingPage";
 import App from "./App";
 import { SolarSystemView } from "./components/SolarSystemView";
-import InfoPage from "./components/InfoPage"
+import InfoPage from "./components/InfoPage";
+import { LoadingScreen } from "./components/LoadingScreen";
 
 // import NotFoundPage from "./NotFoundPage";
 
@@ -19,7 +20,8 @@ const AppRoutes = () => {
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/home" element={<SolarSystemView />} />
-        <Route path="/learnMore"  element={<InfoPage />}  />
+        <Route path="/learnMore" element={<InfoPage />} />
+        <Route path="/loading" element={<LoadingScreen />} />
       </Routes>
     </Router>
   );

@@ -41,13 +41,13 @@ Landing Page  */
   flex-basis: auto;
   flex-direction: column;
   align-items: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .landingPage div {
   /* background-color: black; */
   /* justify-content: center; */
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   /* height: 100rem; */
 }
 
@@ -288,7 +288,7 @@ Single Planet */
 
 .planetText {
   color: blanchedalmond;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 3rem;
   position: absolute;
   bottom: 15%;
@@ -483,7 +483,7 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Gajillion_Islands_Plan
 #infoPageContainer {
   background-color: black;
   color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #infoPageIntro {
@@ -600,4 +600,12 @@ a li {
 #infoPageContent .toc5methods p {
   font-size: 1.1rem;
   margin-bottom: 4rem;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: black;
+  overflow: hidden;
 }

@@ -1,6 +1,6 @@
-import React, { useEffect, Suspense, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import React, { useEffect, Suspense, useRef } from "react";
+import { Link } from "react-router-dom";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 class LandingPage extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class LandingPage extends React.Component {
             style={{
               backgroundImage:
                 'url("https://i.pinimg.com/originals/f9/a8/ed/f9a8ed161524ca06e0d5250fe2d33e51.gif")',
-              backgroundSize: 'cover',
+              backgroundSize: "cover",
             }}
           >
             <div>
@@ -39,7 +39,7 @@ class LandingPage extends React.Component {
             style={{
               backgroundImage:
                 'url("https://c.tenor.com/KRIGLPCuG-4AAAAC/earth-planet.gif")',
-              backgroundSize: '50%',
+              backgroundSize: "50%",
             }}
           >
             <h2 className="rightText">“Look again at that dot..."</h2>
@@ -50,8 +50,8 @@ class LandingPage extends React.Component {
             style={{
               backgroundImage:
                 'url("https://universemagazine.com/wp-content/uploads/2018/02/JfTWcaPlXFw-1024x640.jpg")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           >
             <h2 className="centerOffsetLeftText">That's here.</h2>
@@ -65,7 +65,7 @@ class LandingPage extends React.Component {
                   alt="milkway"
                 />
                 <div id="sunWrapper">
-                  <Link to={'/home'}>
+                  <Link to={"/home"}>
                     <button id="sun" className="galaxyButtons"></button>
                   </Link>
                   <span id="sunDescription">The Sun</span>
