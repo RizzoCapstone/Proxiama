@@ -20,7 +20,7 @@ const CameraController = (props) => {
   let { camera, gl } = useThree();
   console.log("PROP VIEW STATE!", props.viewState);
   let controls = new OrbitControls(camera, gl.domElement);
-  ChangeCameraPosition([-350, 250, 0], 40, 10000);
+  ChangeCameraPosition([-350, 250, 0], 40, 100);
   useEffect(() => {
     if (props.viewState === "singlePlanetView") {
       controls.minDistance = 0.002;
@@ -38,7 +38,6 @@ const CameraController = (props) => {
 };
 
 const SinglePlanetView = (props) => {
-  console.log("SINGLEPLANET_PROPS", props);
   const ref = useRef();
   let planetRef = useRef([]);
   const speed = 0.009;

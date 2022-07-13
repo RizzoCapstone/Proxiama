@@ -20,7 +20,6 @@ const ChangeCameraPosition = (arr, fov, far) => {
 
 const CameraController = (props) => {
   let { camera, gl } = useThree();
-  console.log("PROP VIEW STATE!", props.viewState);
   let controls = new OrbitControls(camera, gl.domElement);
   ChangeCameraPosition([-350, 250, 0], 40, 10000);
   useEffect(() => {
@@ -113,9 +112,14 @@ export const SolarSystemView = () => {
   return (
     <div className="App" width={window.innerWidth} height={window.innerHeight}>
       {viewState === "singlePlanetView" ? (
-        <div className="planetText">
-          {singlePlanetInfo[singlePlanetKey].name}
-        </div>
+        <>
+          <div>
+            <button>GO BACK</button>
+          </div>
+          <div className="planetText">
+            {singlePlanetInfo[singlePlanetKey].name}
+          </div>
+        </>
       ) : (
         ""
       )}
