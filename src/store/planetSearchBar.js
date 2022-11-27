@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const GET_PLANETS_BY_NAME = 'GET_PLANETS_BY_NAME';
+const GET_PLANETS_BY_NAME = "GET_PLANETS_BY_NAME";
 
 const gotPlanetsByName = (data) => ({ type: GET_PLANETS_BY_NAME, data });
 
@@ -8,7 +8,7 @@ export const getPlanetsByName = (planetName) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(
-        `https://proxima-worlds-backend.herokuapp.com/api/planets/name/${planetName}`
+        `https://proxima-world-backend.herokuapp.com/api/planets/name/${planetName}`
       );
       dispatch(gotPlanetsByName(data));
     } catch (error) {

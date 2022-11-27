@@ -1,7 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const GET_SINGLE_SYSTEM_BY_NAME = 'GET_SINGLE_SYSTEM_BY_NAME';
-
+const GET_SINGLE_SYSTEM_BY_NAME = "GET_SINGLE_SYSTEM_BY_NAME";
 
 const gotSingleSystem = (system) => ({
   type: GET_SINGLE_SYSTEM_BY_NAME,
@@ -11,7 +10,9 @@ const gotSingleSystem = (system) => ({
 export const getSingleSystemByName = (name) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`https://proxima-worlds-backend.herokuapp.com/api/systems/${name}`);
+      const { data } = await axios.get(
+        `https://proxima-world-backend.herokuapp.com/api/systems/${name}`
+      );
       dispatch(gotSingleSystem(data));
     } catch (error) {
       console.error(error);

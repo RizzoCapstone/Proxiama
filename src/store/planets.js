@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
 // const FETCH_PLANET = "FETCH_PLANET";
 // const FETCH_PLANETS = "FETCH_PLANETS";
-const GET_PLANETS_BY_TYPE = 'GET_PLANETS_BY_TYPE';
-const GET_MORE_PLANETS_BY_TYPE = 'GET_MORE_PLANETS_BY_TYPE';
+const GET_PLANETS_BY_TYPE = "GET_PLANETS_BY_TYPE";
+const GET_MORE_PLANETS_BY_TYPE = "GET_MORE_PLANETS_BY_TYPE";
 
 const gotPlanetsByType = (data) => ({ type: GET_PLANETS_BY_TYPE, data });
 const gotMorePlanetsByType = (data) => ({
@@ -15,7 +15,7 @@ export const getPlanetsByType = (type, offset) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(
-        `https://proxima-worlds-backend.herokuapp.com/api/planets/${type}`
+        `https://proxima-world-backend.herokuapp.com/api/planets/${type}`
         // { params: { offset: offset } }
       );
       dispatch(gotPlanetsByType(data));
@@ -29,7 +29,7 @@ export const getMorePlanetsByType = (type, offset) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(
-        `https://proxima-worlds-backend.herokuapp.com/api/planets/${type}`,
+        `https://proxima-world-backend.herokuapp.com/api/planets/${type}`,
         { params: { offset: offset } }
       );
       dispatch(gotMorePlanetsByType(data));
